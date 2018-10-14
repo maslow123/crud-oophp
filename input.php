@@ -49,10 +49,10 @@
 									<td>&nbsp;</td>
 									<td>
 										<div class="btn-form col-sm-12">
-											<button class="btn btn-primary" type="submit" onclick="return confirm('Yakin Simpan?')">Simpan</button>
+											<button class="btn btn-primary" type="submit" onclick="return confirm('Yakin Simpan?')">Simpan</button>					
 											<a href="tampil.php">
-												<button type="submit" class="btn btn-default" style="text-align:right;">Batal</button>
-											</a>
+												<button type="button" class="btn btn-default">Batal</button>
+											</a>											
 										</div>
 									</td>
 								</tr>

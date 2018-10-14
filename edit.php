@@ -18,7 +18,7 @@
 	$dbase->connectMySQL();
 	//proses hapus data melalui ID yang dimasukkan
 	?>	
-	<div class="col-md-12">
+	<div class="col-md-15">
 		<div class='form-group'>
 			<div class='col-sm-10'>
 				<div class="panel panel-primary">
@@ -59,14 +59,19 @@
 										<div class="col-sm-10">
 											<input class='form-control' type="text" maxlength="4" size="4" name="tahunTerbit" value="<?php echo $d['tahunTerbit'];?>">
 										</div>
-										</div>
 									</td>
 								</tr>
+								<tr>
+									<td><br/></td>
+								</tr>							
 								<tr>
 									<td>&nbsp;</td>
 									<td>
 										<div class='btn-form col-sm-12'>
 											<button type="submit" class='btn btn-primary'>Simpan</button>
+											<a href="tampil.php">
+												<button type="button" class='btn btn-default'>Batal</button>
+											</a>
 										</div>
 									</td>
 								</tr>
