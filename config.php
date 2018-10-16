@@ -7,6 +7,6 @@
 	$pass = "";
 	$mydb = "belajar";
 	
-	$db = new database($host,$user,$pass,$mydb);
-    $db->connectMySQL();
+	$dbase = new database($host,$user,$pass,$mydb);
+    $dbase->connectMySQL();
 	

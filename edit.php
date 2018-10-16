@@ -4,19 +4,7 @@
 	</head>
 <body>
 <?php
-	include 'database.php';
-	
-	$host="localhost";
-	$user="root";
-	$pass="";
-	$db  ="belajar";
-	
-	//instansisasi dan setting properties objek database
-	
-	$dbase = new database($host,$user,$pass,$db);
-	//koneksi ke mysql via method
-	$dbase->connectMySQL();
-	//proses hapus data melalui ID yang dimasukkan
+	include 'config.php';
 	?>	
 	<div class="col-md-15">
 		<div class='form-group'>
@@ -61,6 +49,19 @@
 										</div>
 									</td>
 								</tr>
+								<tr>
+									<td>Jenis Buku</td>
+									<td>
+										<div class="col-sm-10">
+											<select name="jenis_buku" class="form-control">
+												<option value="Text Book"<?php if($d['jenis_buku'] == "Text Book")
+												{echo 'selected';}?>>Text Book</option>
+												<option value="Majalah"<?php if($d['jenis_buku'] == "Majalah")
+												{echo 'selected';}?>>Majalah</option>
+												<option value="Tutorial"<?php if($d['jenis_buku'] == "Tutorial")
+												{echo 'selected';}?>>Tutorial</option>
+											</select>
+										</div>
 								<tr>
 									<td><br/></td>
 								</tr>							

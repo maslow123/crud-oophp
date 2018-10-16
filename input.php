@@ -43,6 +43,17 @@
 									</td>
 								</tr>
 								<tr>
+									<td>Jenis Buku</td>
+									<td>
+										<div class="col-sm-10">
+											<select name="jenis" class="form-control" style="cursor:pointer;">
+												<option value="Text Book">Text Book</option>
+												<option value="Majalah">Majalah</option>
+												<option value="Tutorial">Tutorial</option>
+											</select> 
+										</div>
+									</td>
+								<tr>
 									<td><br></td>
 									<td></td>					
 								<tr>
