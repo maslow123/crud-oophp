@@ -2,12 +2,13 @@
 <head>
 	<link rel="stylesheet" href="bootstrap.css">
 </head>
+<body>
 	<div class="col-md-15">
 		<div class="form-group">
 			<div class="col-sm-10">
 				<div class="panel panel-primary">
 					<div class="panel-heading">Tambah Data Siswa</div>
-					<div class="panel-body">
+					<div class="panel-body">						
 						<form action="proses.php?aksi=tambah" method="post">
 							<table>
 								<tr>
@@ -53,9 +54,11 @@
 											</select> 
 										</div>
 									</td>
+								</tr>
 								<tr>
 									<td><br></td>
-									<td></td>					
+									<td></td>
+								</tr>					
 								<tr>
 									<td>&nbsp;</td>
 									<td>
@@ -66,13 +69,19 @@
 											</a>											
 										</div>
 									</td>
-								</tr>
+								</tr>							
 							</table>
 						</form>
+					<!-- end panel-body -->
 					</div>
+				<!-- end panel-primary -->
 				</div>
+			<!-- end col-sm -->
 			</div>
+		<!-- end form-group -->
 		</div>
+	<!-- end col-md -->
 	</div>
+</body>
 </html>
 	

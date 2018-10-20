@@ -15,6 +15,6 @@
 		}
 	} 
 	$dbase->tampilkan();
-	?>
+	?>	
 </body>
 </html>

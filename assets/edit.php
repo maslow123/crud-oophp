@@ -62,6 +62,8 @@
 												{echo 'selected';}?>>Tutorial</option>
 											</select>
 										</div>
+									</td>
+								</tr>
 								<tr>
 									<td><br/></td>
 								</tr>							
@@ -79,8 +81,15 @@
 							</table>
 							<?php } ?>
 						</form>
+					<!-- end panel-body -->
 					</div>
+				<!-- end panel-primary -->
 				</div>
+			<!-- end col-sm -->
 			</div>
+		<!-- end form-group --> 
 		</div>
+	<!-- end col-md -->
 	</div>
+</body>
+</html>
