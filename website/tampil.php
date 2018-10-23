@@ -7,7 +7,7 @@
 <?php
 	session_start();
 	include 'config/config.php';
-	
+
 	// jika session kosong maka akan kembali ke menu login
 	if(empty($_SESSION['username'])){
 		echo "<script>alert('silahkan login terlebih dahulu');
@@ -22,6 +22,12 @@
 		}
 	} 
 	$dbase->tampilkan_admin();
+	
+	//jika tombol logout di klik, session akan berakhir...
+	if(isset($_POST['logout'])){
+		$dbase->logout();
+		echo "<script>document.location.href = '../index.php'</script>";
+	}
 	?>	
 </body>
 </html>
