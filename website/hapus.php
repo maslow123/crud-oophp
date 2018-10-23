@@ -1,5 +1,5 @@
 <?php
-	include 'database.php';
+	include 'config/database.php';
 	
 	$host="localhost";
 	$user="root";

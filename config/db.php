@@ -1,5 +1,5 @@
 <?php
-	class database{
+	class konek{
 		//properties
 		private $dbHost;
 		private $dbUser;
@@ -14,7 +14,7 @@
 			$this->dbName = $d;
 		}
 		// method koneksi mysql
-		function connectMySQL(){
+		function connect(){
 			mysql_connect($this->dbHost,$this->dbUser,$this->dbPass);
 				
 			mysql_select_db($this->dbName);

@@ -25,10 +25,77 @@
 			echo "Data berhasil ditambahkan !<br/>";
 			?><a href='tampil.php' style='text-decoration:underline;'>kembali ke beranda</a><?php
 		}
-		// method view 
-		function tampilkan(){?>
+		// bila operator yang login maka tidak ada fitur ...
+		function tampilkan_operator(){?>
 			<div class="panel panel-primary">
 				<div class="panel-heading">Data buku perpustakaan</div>
+				<div class="panel-body">
+					<div class="col-md-12">
+						<div class="table-responsive">
+							<!-- proses pengiriman form ke proses.php -->
+							<form action="proses.php?aksi=cari-operator" method="post">										
+								<div class="col-sm-10" style="margin-left:-14px;">
+									<input class="form-control" placeholder=" cari judul buku.." type=" text" name="keyword">
+								</div>
+								<button class="btn btn-success" type="submit" style="margin-left:-14px;">Cari</button>
+							</form>							
+							<table class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th>No</th>
+										<th>Judul</th>
+										<th>Pengarang</th>
+										<th>Penerbit</th>
+										<th>Tahun Terbit</th>
+										<th>Jenis Buku</th>
+										<th>Keterangan</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php
+										//query untuk menampilkan data
+										$query = "SELECT *FROM buku";
+										$result = mysql_query($query);
+										//cek apakah data kosong atau tidak
+										if(mysql_num_rows($result)==0){
+											echo "<tr><td colspan=7>Tidak ada data !</td></tr>";
+										}
+										//apabila data tidak kosong maka ..
+										else{
+											$i = 1;
+											// menangkap perulangan array dari query $result
+											while($data = mysql_fetch_array($result)){
+												echo"<tr>
+														<td>".$i."</td>
+														<td>".$data['judul']."</td>
+														<td>".$data['pengarang']."</td>
+														<td>".$data['penerbit']."</td>
+														<td>".$data['tahunTerbit']."</td>
+														<td>".$data['jenis_buku']."</td>
+														<td> Tersedia </td>		
+													</tr>";
+												$i++;
+											// end while
+											}
+										// end else
+										}
+									echo "</table>";?>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+		<?php } 
+		// bila admin yang login maka terdapat fitur ...
+		function tampilkan_admin(){?>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					Data buku perpustakaan
+					<span class="pull-right"> 
+						<i class="icon-user"></i> Admin
+					 	<i class="glyphicon glyphicon-log-out"></i> Logout
+					</span>
+				</div>
 				<div class="panel-body">
 					<div class="col-md-12">
 						<div class="table-responsive">
@@ -101,6 +168,7 @@
 						</div>
 					</div>
 				</div>
+			<!-- end method -->
 		<?php } 
 		// method hapus data 
 		function hapus($id){
@@ -138,9 +206,10 @@
 			// apabila data yang dicari tidak ada..
 			if(mysql_num_rows($result)==0){
 				echo "Data tidak ada ! Harap masukkan kata kunci dengan benar !";
+				error_reporting(0);
 			}
 			// apabila data yang dicari ada isinya, maka..
-			else{
+			else{				
 				while($data = mysql_fetch_array($result)){
 					$hasil[] = $data;
 				}			

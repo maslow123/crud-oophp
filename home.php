@@ -1,18 +1,29 @@
 <?php
 	session_start();
-	include 'conf.php';
+	include 'config/conf.php';
 
-	$user = new User();	
+	$users = new User();	
 
 	if(empty($_SESSION['username'])){
 		echo "<script>alert('silahkan login terlebih dahulu');
-					  document.location.href='home.php'</script>";
+					  document.location.href='index.php'</script>";
 	}
 	$username = $_SESSION['username'];
+	
+	if(isset($_POST['logout'])){
+		$users->logout();
+		echo "<script>alert('anda telah keluar !');
+					  document.location.href='index.php'</script>";
+		}
 	?>
 	<!DOCTYPE html>
 	<html>
 		<body>
-			<h1 align="center">SELAMAT DATANG <?php echo $username;?></h1>
+			<?php foreach($users->bacaUser($username) as $v){?>
+				<h1 align="center">SELAMAT DATANG <b><?php echo $v['nama'];?></b></h1>
+			<?php }?>
+			<form method="POST">
+				<input type="submit" name="logout" value="logout">
+			</form>
 		</body>
 	</html>

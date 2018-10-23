@@ -1,0 +1,11 @@
+== pemakaian program ==
+1.untuk menjalankan program import terlebih dahulu databasenya pak
+2.konsep program yang saya buat sebenernya harus login dulu pak , namun ada
+  kendala yang saya temukan sampe sekarang belum terselesaikan, jadi ada sedikit masalah di program loginnya pak.
+  Jadi saya hanya membuat ketika login berhasil akan menampilkan salam kepada user yang telah login, serta logout dengan menggunakan
+  session.
+3.untuk program utama (crud) bapak bisa mengakses urlnya..
+  http://127.0.0.1/padli/crud-OOPHP/website/index.php (tadinya sih untuk level user)
+  http://127.0.0.1/padli/crud-OOPHP/website/tampil.php (tadinya sih untuk level admin) 
+4. terima kasih pak 
+== s e l e s a i ==

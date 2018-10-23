@@ -1,10 +1,10 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
 	</head>
 <body>
 <?php
-	include 'config.php';
+	include 'config/config.php';
 	?>	
 	<div class="col-md-15">
 		<div class='form-group'>
