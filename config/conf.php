@@ -52,7 +52,7 @@
         }    
         return $result;
 	     }
-       
+
       function logout(){
          session_destroy();
       }

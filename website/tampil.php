@@ -2,6 +2,7 @@
 	<head>
 		<link rel="stylesheet" href="css/bootstrap.css">
         <link href="../font-awesome/css/font-awesome.css" rel="stylesheet" />
+        
 	</head>
 <body>
 <?php
