@@ -1,3 +1,4 @@
+
 <?php
     error_reporting(0);
     session_start();
@@ -11,8 +12,6 @@
     if(isset($_POST['login'])){
         $users->cek_login($username,$password);
         $users->bacaUser($username);       
-    }elseif(isset($_POST['batal'])){
-        echo "<script>document.location.href='../'</script>";
     }
     ?>
 
@@ -48,7 +47,11 @@
                     <div class="form-actions">
 
                         <span class="pull-left"><input type="submit" class="btn btn-success" name="login" value="Login"></span>
-                        <span class="pull-right"><input type="submit" class="btn btn-primary" name="batal" value="Batal"></span>
+                        <span class="pull-right">
+                            <a href="../">
+                                <button type="button" class="btn btn-primary">Batal</button>
+                            </a>
+                        </span>
                     </div>
                 </form>               
             </div>

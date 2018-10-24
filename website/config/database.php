@@ -26,13 +26,16 @@
 			?><a href='tampil.php' style='text-decoration:underline;'>kembali ke beranda</a><?php
 		}
 		// bila operator yang login maka tidak ada fitur ...
-		function tampilkan_operator(){?>
+		function tampilkan_operator(){
+			$query = mysql_query("SELECT nama from users WHERE username = '$_SESSION[username]'");
+			$result = mysql_fetch_array($query);
+			?>
 			<form method="post">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					Data buku perpustakaan
 					<span class="pull-right"> 
-						<i class="icon-user"></i> Operator
+						<i class="icon-user"></i> <?php echo $result['nama']; ?>
 					 		<button type="submit" name="logout" style='background:transparent;color:white;border:0;' onclick="return confirm('Yakin ingin logout?')">
 					 		 <span class="glyphicon glyphicon-log-out"></span> Logout
 					 		</button>					 	
@@ -97,13 +100,16 @@
 				</div>
 		<?php } 
 		// bila admin yang login maka terdapat fitur ...
-		function tampilkan_admin(){?>
+		function tampilkan_admin(){
+			$query = mysql_query("SELECT nama from users WHERE username = '$_SESSION[username]'");
+			$result = mysql_fetch_array($query);
+			?>
 			<form method="post">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					Data buku perpustakaan
 					<span class="pull-right"> 
-						<i class="icon-user"></i> Admin
+						<i class="icon-user"></i> <?php echo $result['nama'];?>
 					 		<button type="submit" name="logout" style='background:transparent;color:white;border:0;' onclick="return confirm('Yakin ingin logout?')">
 					 			<span class="glyphicon glyphicon-log-out"></span> Logout
 					 		</button>

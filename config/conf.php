@@ -14,27 +14,29 @@
     class User{
     	// proses login
     	function cek_login($username,$password){
-        @session_start();
+        @session_start(); // menghilangkan pesan eror pada ekspresi session
         $query = mysql_query("SELECT *FROM users WHERE username='$username' and password='$password'");
         $result = mysql_fetch_array($query);
         $cek = mysql_num_rows($query);
 
-        $q = mysql_query("SELECT level FROM users WHERE username='$username'");
+        $q = mysql_query("SELECT level,nama FROM users WHERE username='$username'");
         $akun = mysql_fetch_array($q);
         // cek, jika session ada maka akan menjalani kondisi kedua
         if($cek > 0){
           // cek jika level adalah operator maka dialihkan ke halaman index
           if($akun['level'] == "operator"){
-           
+              
+              $nama = $akun['nama'];
               $_SESSION['username'] = $username;
-              echo "<script>alert('Hai $username, kamu login sebagai operator !');
+              echo "<script>alert('Hai $nama, kamu login sebagai operator !');
                       document.location.href='website/index.php'
                     </script>";                
           //  jika level adalah admin maka dialihkan ke halaman tampil        
           }elseif($akun['level'] == "admin"){
 
-              $_SESSION['username'] = $username;
-              echo "<script>alert('Hai $username, kamu login sebagai admin !');
+              $nama = $akun['nama'];
+              $_SESSION['username'] = $username; 
+              echo "<script>alert('Hai $nama, kamu login sebagai admin !');
                       document.location.href='website/tampil.php'
                     </script>";   
           }
