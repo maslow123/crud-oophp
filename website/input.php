@@ -1,8 +1,14 @@
+
 <html>
 <head>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	<!-- Compiled and minified JavaScript -->
+	<link rel="stylesheet" href="../css/materialize.css">	
+	<!-- 
+		CSS ONLINE -->	
+	<link href="../font-awesome/css/font-awesome.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- 
+		JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
@@ -38,15 +44,13 @@
 							<label for="tahun_terbit">Tahun Terbit</label>
 						</div>
 					</div>
-					<div class="row">							        
-						<div class="input-field col s7">							      		
-							<select name="jenis" class="browser-default" required>
-							    <option value="" disabled selected>Jenis Buku</option>
+					<div class="row">							      
+							<label class="input-field col s7">Jenis Buku</label> 							      		
+							<select name="jenis" class="browser-default" required>							    
 								<option value="Text Book">Text Book</option>
 								<option value="Majalah">Majalah</option>
 								<option value="Tutorial">Tutorial</option>
-							</select>							  								
-						</div>											       
+							</select>							  				
 					</div>							   
     			</form>
     		<!-- end row -->
