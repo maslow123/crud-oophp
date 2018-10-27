@@ -54,8 +54,8 @@
 							<input placeholder="masukkan judul buku.." type="text"  name="keyword" required>
 						</div>
 						<div class="input-field col s2">
-							<button class="waves-effect waves-light btn-small" type="submit">
-								<i class="material-icons">search</i>
+							<button class="waves-effect waves-light btn-small white" type="submit">
+								<i class="material-icons" style="color:black">search</i>
 							</button>
 						</div>
 					</div>
