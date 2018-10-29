@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="../css/materialize.css">		
+		<link rel="stylesheet" href="css/materialize.css">		
 		<link href="../font-awesome/css/font-awesome.css" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -13,10 +13,10 @@
 	include 'config/config.php';
 
 	// jika session kosong maka akan kembali ke menu login
-	if(empty($_SESSION['username'])){
-		echo "<script>alert('silahkan login terlebih dahulu');
-					  document.location.href='../index.php'</script>";
-	}
+	if(empty($_SESSION['admin'])){
+		echo "<script>alert('kamu harus login sebagai admin untuk mengaksesnya');
+					  window.history.back(); </script>";
+		}
 	if(isset($_GET['op'])){
 		if($_GET['op'] == 'del'){
 			// baca ID dari parameter ID buku yang akan dihapus

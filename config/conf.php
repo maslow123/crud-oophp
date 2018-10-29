@@ -27,7 +27,7 @@
           if($akun['level'] == "operator"){
               
               $nama = $akun['nama'];
-              $_SESSION['username'] = $username;
+              $_SESSION['operator'] = $username;
               echo "<script>alert('Hai $nama, kamu login sebagai operator !');
                       document.location.href='website/index.php'
                     </script>";                
@@ -35,7 +35,7 @@
           }elseif($akun['level'] == "admin"){
 
               $nama = $akun['nama'];
-              $_SESSION['username'] = $username; 
+              $_SESSION['admin'] = $username; 
               echo "<script>alert('Hai $nama, kamu login sebagai admin !');
                       document.location.href='website/tampil.php'
                     </script>";   

@@ -2,14 +2,14 @@
 	session_start();
 	include 'config/config.php';
 	// jika session kosong maka akan kembali ke menu login
-	if(empty($_SESSION['username'])){
-		echo "<script>alert('silahkan login terlebih dahulu');
-					  document.location.href='../index.php'</script>";
+	if(empty($_SESSION['operator'])){
+		echo "<script>alert('kamu harus login sebagai operator untuk mengaksesnya');
+					  window.history.back();</script>";
 	}
 ?>
 <html>
 	<head>
-		<link rel="stylesheet" href="../css/materialize.css">	
+		<link rel="stylesheet" href="css/materialize.css">	
 		<!-- 
 			CSS ONLINE -->	
 		<link href="../font-awesome/css/font-awesome.css" rel="stylesheet" />

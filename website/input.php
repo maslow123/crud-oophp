@@ -1,7 +1,7 @@
 
 <html>
 <head>
-	<link rel="stylesheet" href="../css/materialize.css">	
+	<link rel="stylesheet" href="css/materialize.css">	
 	<!-- 
 		CSS ONLINE -->	
 	<link href="../font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -10,6 +10,12 @@
 	<!-- 
 		JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <style>
+    	.logo{
+    		font-size:40px;
+    	}
+    </style>
 </head>
 <body>
 	<nav>
@@ -31,31 +37,44 @@
 	<div class="row">	
 		<form class="col s12" action="proses.php?aksi=tambah" method="post">
 			<div class="row">
-				<div class="input-field col s6">
+				<div class="input-field col">
+					<i class="material-icons logo">assignment</i>
+				</div>
+				<div class="input-field col s5">
 					<input placeholder="Judul buku" id="judul" type="text" class="validate" name="judul" required>
 					<label for="judul">Judul</label>
-				</div>							    
-				<div class="input-field col s6">
+				</div>						
+				<div class="input-field col">
+					<i class="material-icons logo"">face</i>
+				</div>	    
+				<div class="input-field col s5">
 					<input id="pengarang" type="text" class="validate" name="pengarang" required>
 					<label for="pengarang">Pengarang</label>
 				</div>
 			</div>
 			<div class="row">
-				<div class="input-field col s6">
+				<div class="input-field col">
+					<i class="material-icons logo">account_balance</i>
+				</div>
+				<div class="input-field col s5">
 					<input id="penerbit" type="text" class="validate" name="penerbit" required>
 					<label for="penerbit">Penerbit</label>
 				</div>
-				<div class="input-field col s6">
+				<div class="input-field col">
+					<i class="material-icons logo">calendar_today</i>
+				</div>
+				<div class="input-field col s5">
 					<input id="tahun_terbit" type="text" class="validate" name="tahunTerbit" required>
 					<label for="tahun_terbit">Tahun Terbit</label>
 				</div>
-				<div class="input-field col s12">
-					<label style="padding-left: 40em;">Jenis Buku</label>
+				<div class="input-field col s10" style="padding-left: 38em;">
+					<i class="material-icons logo">description</i>
+					<label  style="padding-left: 40em;">Jenis Buku</label>
 				</div>
 			</div>
 			<div class="row">	
 				<div class="input-field col s12">
-					<select name="jenis" class="browser-default">
+					<select name="jenis" class="browser-default" style="text-align: center;">
 						<option disabled selected></option>							    
 						<option value="Text Book">Text Book</option>
 						<option value="Majalah">Majalah</option>

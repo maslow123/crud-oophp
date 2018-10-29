@@ -27,7 +27,7 @@
 		}
 		// bila operator yang login maka tidak ada fitur ...
 		function tampilkan_operator(){
-			$query = mysql_query("SELECT nama from users WHERE username = '$_SESSION[username]'");
+			$query = mysql_query("SELECT nama from users WHERE username = '$_SESSION[operator]'");
 			$result = mysql_fetch_array($query);
 			?>
 			<nav>
@@ -108,7 +108,7 @@
 		<?php } 
 		// bila admin yang login maka terdapat fitur ...
 		function tampilkan_admin(){
-			$query = mysql_query("SELECT nama from users WHERE username = '$_SESSION[username]'");
+			$query = mysql_query("SELECT nama from users WHERE username = '$_SESSION[admin]'");
 			$result = mysql_fetch_array($query);
 			?>
 			<nav>
@@ -143,8 +143,8 @@
 								<input placeholder="masukkan judul buku.." type="text"  name="keyword" required>
 							</div>
 							<div class="input-field col s2">
-								<button class="waves-effect waves-light btn white" style="height:45px;"type="submit">
-									<i class="material-icons" style="color:black;">search</i>
+								<button class="waves-effect waves-light btn blue"type="submit">
+									<i class="material-icons" style="color:white;">search</i>
 								</button>
 							</div>
 						</div>
@@ -185,14 +185,14 @@
 											<td>".$data['jenis_buku']."</td>
 											<td><a href='edit.php?id=".$data['id']."&aksi=edit'
 														style='text-decoration:none;'>
-														<button type='button' class='btn-floating white'>
-												 			<span class='fa fa-edit' style='font-size:18px;color:black;'>
+														<button type='button' class='btn-floating blue'>
+												 			<span class='fa fa-edit' style='font-size:18px;'>
 												 			</span>
 														</button>
 												</a>"?>
 												<a href="<?php echo $_SERVER['PHP_SELF']?>?op=del&id=<?php echo $data['id']?>"		   style='text-decoration:none;' onclick="return confirm('Yakin hapus?')	  ">
-													<button type='button' class="btn-floating white">
-														<span class='fa fa-remove' style='font-size:18px;color:black'></span>
+													<button type='button' class="btn-floating red">
+														<span class='fa fa-remove' style='font-size:18px;'></span>
 													</button>
 												</a>
 												<?php
