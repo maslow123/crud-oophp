@@ -1,7 +1,7 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="css/materialize.css">		
-		<link href="../font-awesome/css/font-awesome.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/materialize.css">		
+		<link href="../../font-awesome/css/font-awesome.css" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -9,7 +9,7 @@
 	</head>
 <body>
 <?php
-	include 'config/config.php';
+	include '../models/config.php';
 	
 	$aksi = $_GET['aksi'];
 	if($aksi == "update"){
@@ -43,8 +43,8 @@
 						<input type="text" name="keyword" placeholder="masukkan judul buku.."/>
 					</div>
 					<div class="input-field col s2">
-						<button type="submit" class="waves-effect waves-light btn white">
-							<i class="material-icons white" style="color:black;">search</i>
+						<button type="submit" class="waves-effect waves-light btn blue">
+							<i class="material-icons">search</i>
 						</button>
 					</div>
 				</div>
@@ -84,7 +84,7 @@
 			</table>
 		<?php				
 	}elseif($aksi == "cari-operator"){?>
-		<form method="post">
+			<form method="post">
 				<nav>
 					<div class="nav-wrapper blue"">
 						Data buku perpustakaan
@@ -97,21 +97,21 @@
 						</div>
 					</div>				
 				</nav>
-			<div class="row">
-				<div class="input-field col s3">
-					Hasil pencarian : <b> <?php echo $_POST['keyword'];?>...</b>
-				</div>
-				<div style="margin-left: 60em;">
-					<div class="input-field col s9">
-						<input type="text" name="keyword" placeholder="masukkan judul buku.."/>
+				<div class="row">
+					<div class="input-field col s3">
+						Hasil pencarian : <b> <?php echo $_POST['keyword'];?>...</b>
 					</div>
-					<div class="input-field col s2">
-						<button type="submit" class="waves-effect waves-light btn white">
-							<i class="material-icons white" style="color:black;">search</i>
-						</button>
+					<div style="margin-left: 60em;">
+						<div class="input-field col s9">
+							<input type="text" name="keyword" placeholder="masukkan judul buku.."/>
+						</div>
+						<div class="input-field col s2">
+							<button type="submit" class="waves-effect waves-light btn blue">
+								<i class="material-icons">search</i>
+							</button>
+						</div>
 					</div>
 				</div>
-			</div>
 			</form>
 			<table class="responsive-table centered">
 				<thead>
